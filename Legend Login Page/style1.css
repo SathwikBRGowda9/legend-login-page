@@ -1,0 +1,152 @@
+body {
+  background-color: hsl(260, 8%, 7%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 2em;
+  background-color: #06254e;
+  border-radius: 25px;
+  transition: .4s ease-in-out;
+  width: 320px;
+  border: 1px solid burlywood;
+  animation: borderGlow 3s infinite;
+}
+
+@keyframes borderGlow {
+  0% {
+    border-color: burlywood;
+    box-shadow: 0 0 5px burlywood;
+  }
+  50% {
+    border-color: gold;
+    box-shadow: 0 0 15px gold;
+  }
+  100% {
+    border-color: burlywood;
+    box-shadow: 0 0 5px burlywood;
+  }
+}
+
+.form:hover {
+  transform: scale(1.05);
+}
+
+.emoji {
+  font-size: 3em;
+  text-align: center;
+}
+
+#heading {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.6em;
+  border-radius: 25px;
+  background-color: #222;
+  box-shadow: inset 2px 5px 10px #050505;
+}
+
+.input-icon {
+  color: white;
+  font-size: 1.2em;
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #d3d3d3;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 2em;
+  position: relative;
+}
+
+.button1{
+  padding: 0.5em 1.5em;
+  border-radius: 5px;
+  border: none;
+  background-color: #3b3b3b;
+  color: white;
+  transition: 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+}
+
+.button1:hover{
+  background-color: #000;
+}
+
+.button1.move {
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.button3 {
+  padding: 0.5em;
+  margin-top: 1.5em;
+  border-radius: 5px;
+  border: none;
+  background-color: #252525;
+  color: white;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.button3:hover {
+  background-color: red;
+}
+
+.signup-text {
+  color: #aaa;
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.signup-text a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.popup {
+  position: fixed;
+  top: 20px;
+  background-color: red;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ff0000;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  transition: 0.3s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
